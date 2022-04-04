@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy ]
+  # FIXME: 修正内容(...)
 
   # GET /books or /books.json
   def index
@@ -67,4 +68,6 @@ class BooksController < ApplicationController
     def book_params
       params.require(:book).permit(:title, :description)
     end
+
+  # OPTIMIZE: 最適化したい内容(...)
 end
