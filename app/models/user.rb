@@ -1,7 +1,11 @@
 class User < ApplicationRecord
+  has_many :rentals
+  has_many :books, through: :rentals
+
   # Userモデルの属性emailが適正なメールアドレスかを
   # 独自のメソッドによるバリデーションによって実装する
   # validate :email_check
+
   validates :email, email_address: true
 
   # private
