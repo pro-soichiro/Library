@@ -8,7 +8,6 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <header>
       <ul>
@@ -21,8 +20,6 @@
       <%= yield %>
     </div>
     <hr>
-    <footer>
-      <p>Ⓒ 019 Copyright resereved rails Library</p>
-    </footer>
+    <%= yield :footer %>
   </body>
 </html>
