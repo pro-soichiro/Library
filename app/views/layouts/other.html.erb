@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><%= link_to  "図書登録", new_book_path %></li>
+        <li><%= link_to  "図書一覧", books_path %></li>
+        <li><%= link_to  "利用者登録", new_user_path %></li>
+        <li><%= link_to  "利用者一覧", users_path %></li>
+      </ul>
+    </header>
+    <hr>
+    <div class="main">
+      <h1>layouts/otherです。</h1>
+      <%= yield %>
+    </div>
+    <hr>
+    <footer>
+      <p>Ⓒ 019 Copyright resereved rails Library</p>
+    </footer>
+  </body>
+</html>
