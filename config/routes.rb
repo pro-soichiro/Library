@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "book#index"
+  root to: "books#index"
   resources :users
   resources :acceptances, only: [:new,:create]
   resources :books
