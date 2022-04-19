@@ -7,6 +7,11 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
+  def search
+    @books = Book.where(title: params[:search][:title])
+    render :index
+  end
+
   # GET /books/1 or /books/1.json
   def show
   end
