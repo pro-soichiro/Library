@@ -5,7 +5,7 @@ class User < ApplicationRecord
   # Userモデルの属性emailが適正なメールアドレスかを
   # 独自のメソッドによるバリデーションによって実装する
   # validate :email_check
-
+  validates :name,:email,presence: true
   validates :email, email_address: true
 
   # private
