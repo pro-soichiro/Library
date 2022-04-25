@@ -8,7 +8,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= User.human_attribute_name('name') %></strong>
   <%= @user.name %>
 </p>
 
@@ -18,7 +18,7 @@
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong><%= User.human_attribute_name('email') %></strong>
   <%= @user.email %>
 </p>
 
@@ -27,5 +27,5 @@
   <%= @user.birthday %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to t('button.edit'), edit_user_path(@user) %> |
+<%= link_to t('button.back'), users_path %>
