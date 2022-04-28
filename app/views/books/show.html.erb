@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
@@ -8,6 +10,18 @@
 <p>
   <strong>Description:</strong>
   <%= @book.description %>
+</p>
+
+<p>
+  <strong>Images:</strong>
+  <% @book.images.each do |image| %>
+    <%= image_tag image, class: "image" %>
+  <% end %>
+</p>
+
+<p>
+  <strong>samples:</strong>
+  <%= link_to "サンプル#{@book.sample.filename}", url_for(@book.sample) if @book.sample.attached? %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |

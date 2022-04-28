@@ -1,4 +1,6 @@
 class Book < ApplicationRecord
+  has_many_attached :images
+  has_one_attached :sample
   has_many :rentals
   has_many :users, through: :rentals
 
