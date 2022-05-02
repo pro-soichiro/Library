@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  address: MyString
-  email: MyString
-  birthday: 2022-04-04
+taro:
+  name: 山田　太郎
+  address: 東京
+  email: yamada@sample.com
+  birthday: 1998-06-26
 
-two:
-  name: MyString
-  address: MyString
-  email: MyString
-  birthday: 2022-04-04
+hana:
+  name: 田中　花子
+  address: 大阪
+  email: hana@sample.com
+  birthday: 1996-06-14

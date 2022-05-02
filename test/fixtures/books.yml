@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
+book_1:
+  title: Ruby入門
+  description: 初心者に優しい解説書です
 
-two:
-  title: MyString
-  description: MyText
+book_2:
+  title: Railsの夜明け
+  description: Railsフレームワークの...
