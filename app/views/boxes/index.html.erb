@@ -1,0 +1,9 @@
+<hi>リクエスト一覧</hi>
+<div id="boxes">
+
+</div>
+<br>
+<%= form_with scope: '',method: 'get' do |form| %>
+  <%= form.label :リクエスト %>
+  <%= form.text_field :box_request %>
+<% end %>

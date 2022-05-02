@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'boxes/index'
   root to: "books#index"
   resources :users
   resources :acceptances, only: [:new,:create]
