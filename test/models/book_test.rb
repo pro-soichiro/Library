@@ -22,4 +22,10 @@ class BookTest < ActiveSupport::TestCase
     assert_equal 2, book.errors.count
   end
 
+  test "説明文が文字数100文字以上をエラーとする検証" do
+    book = Book.create(title: "Railsの大冒険", description: "lllllllllOlllllllllOlllllllllOlllllllllOlllllllllOlllllllllOlllllllllOlllllllllOlllllllllOlllllllllOl", images: @book_images)
+    assert_equal "は100文字以内で入力してください", book.errors.messages[:description][0]
+    assert_equal 1, book.errors.count
+  end
+
 end

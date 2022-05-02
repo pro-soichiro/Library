@@ -18,11 +18,21 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
     end
     # 新規図書登録後のリダイレクトを確認
     assert_response :redirect
+
   end
 
   test "該当図書の表示" do
     get book_url(@book)
     assert_response :success
+  end
+
+  test "該当図書の削除" do
+
+    assert_difference ('Book.count'), -1 do
+      delete book_url(@book)
+      assert_response :redirect
+    end
+
   end
 
 end
